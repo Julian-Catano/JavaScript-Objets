@@ -35,7 +35,11 @@ class Persona{
     }
 
     obtenerEdad(edad){
-
+        if(edad < 0){
+            alert("No se puede esa edad brodel")
+        }else{
+            return this.#edad=edad
+        }
     }
 
 
