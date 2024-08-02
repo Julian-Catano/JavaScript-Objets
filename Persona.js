@@ -44,7 +44,11 @@ class Persona{
 
     establecerFechaNacimiento(fechaNacimiento){
 
-
+        if(fechaNacimiento > new Date()){
+            alert("No se puede esa fecha brodel")
+        } else{
+            this.#fechaNacimiento=fechaNacimiento
+        } 
         
     }
 
