@@ -5,7 +5,9 @@ class Estudiante extends Persona {
         this.grado = grado;
     }
 
-
+    toString(){
+        return `${super.toString()}, Estudiante: ${this.Estudiante}`;
+    }
 
 
 
