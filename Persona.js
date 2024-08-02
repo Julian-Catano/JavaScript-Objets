@@ -61,6 +61,11 @@ class Persona{
         } 
     }
 
+    calcularFechaNacimiento(edad){
+        
+    }
+
+
 
 
     
