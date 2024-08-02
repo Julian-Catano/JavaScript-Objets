@@ -26,7 +26,11 @@ class Persona{
     }
     establecerEdad(edad){
     
-
+        if(edad < 0){
+            alert("No se puede esa edad brodel")
+        }else{
+            this.#edad=edad
+        } // La edad no puede ser negativa y menor a 18 años
        
     }
 
