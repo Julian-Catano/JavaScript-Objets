@@ -24,6 +24,11 @@ class Persona{
         }
         
     }
+    establecerEdad(edad){
+    
+
+       
+    }
 
 
     
