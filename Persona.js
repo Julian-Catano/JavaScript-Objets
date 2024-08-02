@@ -61,10 +61,24 @@ class Persona{
         } 
     }
 
-    calcularFechaNacimiento(edad){
-        
+    calcularFechaNacimiento(fechaNacimiento){
+        if (this.#fechaNacimiento === ""){
+            console.error("La fecha de nacimiento no puede estar vacía");
+            return
+        }
+        let fechaNacimiento = new Date(this.#fechaNacimiento);
+        let fechaActual = new Date();
+        let edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+        if (
+          fechaActual.getMonth() < fechaNacimiento.getMonth() ||
+          (fechaActual.getMonth() === fechaNacimiento.getMonth() &&
+            fechaActual.getDate() < fechaNacimiento.getDate())
+        ) {
+          edad--;
+        }
+        return edad;
     }
-
+    
 
 
 
