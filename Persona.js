@@ -17,7 +17,11 @@ class Persona{
     }
     obtenerNombre(nombre){
 
-
+        if(nombre !== ""){
+            return this.#nombre
+        }else{
+            alert("Ta vacio manetoo")
+        }
         
     }
 
