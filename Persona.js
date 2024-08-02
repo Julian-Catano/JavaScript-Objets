@@ -52,6 +52,12 @@ class Persona{
         
     }
 
+    
+    obtenerFechaNacimiento(fechaNacimiento){
+
+    }
+
+
 
     
 
