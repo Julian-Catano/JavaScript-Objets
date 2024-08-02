@@ -42,6 +42,11 @@ class Persona{
         }
     }
 
+    establecerFechaNacimiento(fechaNacimiento){
+
+
+        
+    }
 
 
     
