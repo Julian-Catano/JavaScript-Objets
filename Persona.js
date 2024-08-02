@@ -34,6 +34,11 @@ class Persona{
        
     }
 
+    obtenerEdad(edad){
+
+    }
+
+
 
     
 
