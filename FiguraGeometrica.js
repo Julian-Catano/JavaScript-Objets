@@ -34,6 +34,14 @@ class rectangulo extends FiguraGeometrica{
     toString(){
         return `${super.toString()}, longitud: ${this.longitud}, ancho: ${this.ancho}`;
     }
+
+    calcularArea(){
+        return this.longitud * this.ancho;
+    }
+
+    calcularPerimetro(){
+        return 2 * (this.longitud + this.ancho);
+    }
 }
 
 class circulo extends FiguraGeometrica{
@@ -44,5 +52,13 @@ class circulo extends FiguraGeometrica{
 
     toString(){
         return `${super.toString()}, radio: ${this.radio}`;
+    }
+
+    calcularArea(){
+        return Math.PI * Math.pow(this.radio, 2);
+    }
+
+    calcularPerimetro(){
+        return 2 * Math.PI * this.radio;
     }
 }
