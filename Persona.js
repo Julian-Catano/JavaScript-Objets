@@ -1,4 +1,4 @@
-class Persona{
+class Persona {
     #nombre=''
     #edad=''
     #fechaNacimiento=''
@@ -9,7 +9,7 @@ class Persona{
     }
 
     establecerNombre(nombre){
-        if(nombre !== ""){
+        if(this.#nombre !== ""){
             this.#nombre=nombre
         }else{
             return alert("Brodel ta vacio")
@@ -17,34 +17,34 @@ class Persona{
     }
     obtenerNombre(nombre){
 
-        if(nombre !== ""){
-            return this.#nombre
-        }else{
-            alert("Ta vacio manetoo")
+        if(this.#nombre === ''){
+            console.log("Ta vacio manetoo")
         }
+        
+        return this.#nombre
         
     }
     establecerEdad(edad){
     
-        if(edad < 0){
+        if(this.#edad < 0){
             alert("No se puede esa edad brodel")
-        }else{
-            this.#edad=edad
-        } // La edad no puede ser negativa y menor a 18 años
+        }
+        return this.#edad
        
     }
 
-    obtenerEdad(edad){
-        if(edad < 0){
+    obtenerEdad(){
+        if(this.#edad === ""){
             alert("No se puede esa edad brodel")
         }else{
-            return this.#edad=edad
+            return this.#edad
         }
+        
     }
 
     establecerFechaNacimiento(fechaNacimiento){
 
-        if(fechaNacimiento > new Date()){
+        if(this.#fechaNacimiento > new Date()){
             alert("No se puede esa fecha brodel")
         } else{
             this.#fechaNacimiento=fechaNacimiento
@@ -53,11 +53,11 @@ class Persona{
     }
 
     
-    obtenerFechaNacimiento(fechaNacimiento){
-        if(fechaNacimiento > new Date()){
+    obtenerFechaNacimiento(){
+        if(this.#fechaNacimiento > new Date()){
             alert("No se puede esa fecha brodel")
         } else{
-            return this.#fechaNacimiento=fechaNacimiento
+            return this.#fechaNacimiento
         } 
     }
 
@@ -66,13 +66,13 @@ class Persona{
             console.error("La fecha de nacimiento no puede estar vacía");
             return
         }
-        let fechaNacimiento = new Date(this.#fechaNacimiento);
+        let feNacimiento = new Date(this.#fechaNacimiento);
         let fechaActual = new Date();
-        let edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+        let edad = fechaActual.getFullYear() - feNacimiento.getFullYear();
         if (
-          fechaActual.getMonth() < fechaNacimiento.getMonth() ||
-          (fechaActual.getMonth() === fechaNacimiento.getMonth() &&
-            fechaActual.getDate() < fechaNacimiento.getDate())
+          fechaActual.getMonth() < feNacimiento.getMonth() ||
+          (fechaActual.getMonth() === feNacimiento.getMonth() &&
+            fechaActual.getDate() < feNacimiento.getDate())
         ) {
           edad--;
         }
@@ -86,4 +86,6 @@ class Persona{
 
 }
 
+
 module.exports = Persona;
+
